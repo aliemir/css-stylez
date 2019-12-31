@@ -9,6 +9,9 @@
     "prepare": "npm run clean && npm run build",
     "test": "jest"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "jest": {
     "testURL": "http://localhost/"
   },

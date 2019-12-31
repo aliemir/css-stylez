@@ -7,23 +7,23 @@ const createConfig = (input, output, additionnalPlugins = []) => ({
   input,
   output: {
     file: output,
-    format: 'cjs'
+    format: 'cjs',
   },
   plugins: [
     nodeResolve({
-      jsnext: true
+      jsnext: true,
     }),
     commonjs({
-      include: 'node_modules/**'
+      include: 'node_modules/**',
     }),
     babel({
-      exclude: 'node_modules/**'
+      exclude: 'node_modules/**',
     }),
-    ...additionnalPlugins
-  ]
+    ...additionnalPlugins,
+  ],
 })
 
 export default [
   createConfig('src/index.js', 'lib/index.js'),
-  createConfig('src/index.js', 'lib/index.min.js', [uglify()])
+  createConfig('src/index.js', 'lib/index.min.js', [uglify()]),
 ]
