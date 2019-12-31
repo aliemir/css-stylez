@@ -1,0 +1,18 @@
+# IDE & OS specific
+.DS_Store
+.idea
+
+# Logs
+logs
+*.log
+
+# Dependencies
+node_modules
+
+# Sources, tests and builder files
+src
+tests
+.babelrc
+.eslintrc.json
+.npmignore
+rollup.config.js

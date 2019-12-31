@@ -1,0 +1,46 @@
+{
+  "name": "css-stylez",
+  "version": "1.0.0",
+  "description": "A tiny helper to use css modules with ease.",
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "npm run clean && BABEL_ENV=production rollup --config rollup.config.js",
+    "prepare": "npm run clean && npm run build",
+    "test": "jest"
+  },
+  "jest": {
+    "testURL": "http://localhost/"
+  },
+  "license": "MIT",
+  "author": "Ali Emir Şen",
+  "homepage": "http://github.com/aliemir/css-stylez.git",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/aliemir/css-stylez.git"
+  },
+  "bugs": {
+    "mail": "senaliemir@gmail.com",
+    "url": "http://github.com/aliemir/css-stylez/issues"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-jest": "^22.4.4",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-es2017-object-entries": "^0.0.5",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^4.18.2",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-prettier": "^2.7.0",
+    "jest": "^22.4.4",
+    "rimraf": "^2.7.1",
+    "rollup": "^0.51.7",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-uglify": "^3.0.0"
+  },
+  "dependencies": {}
+}
