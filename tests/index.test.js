@@ -27,3 +27,16 @@ describe('bulma-test', () => {
     expect(stylez.is12).toBe(bulmaTest['is-12'])
   })
 })
+
+describe('type handling', () => {
+  test('non object argument 0', () => {
+    expect(() => {
+      cssStylez('test', camelToKebab)
+    }).toThrowError(TypeError)
+  })
+  test('non object argument 1', () => {
+    expect(() => {
+      cssStylez(bulmaTest, '')
+    }).toThrowError(TypeError)
+  })
+})
