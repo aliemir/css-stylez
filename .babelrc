@@ -1,8 +1,8 @@
 {
-  "presets": [["env", { "modules": false }]],
+  "presets": [["@babel/preset-env", { "modules": false }]],
   "plugins": [
     "transform-es2017-object-entries",
-    "transform-object-rest-spread"
+    "@babel/plugin-proposal-object-rest-spread"
   ],
   "env": {
     "test": {
@@ -20,8 +20,7 @@
     "production": {
       "plugins": [
         "transform-es2017-object-entries",
-        "transform-object-rest-spread",
-        "external-helpers"
+        "@babel/plugin-proposal-object-rest-spread"
       ]
     }
   }

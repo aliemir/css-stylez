@@ -1,7 +1,7 @@
 import babel from 'rollup-plugin-babel'
-import nodeResolve from 'rollup-plugin-node-resolve'
-import commonjs from 'rollup-plugin-commonjs'
-import uglify from 'rollup-plugin-uglify'
+import commonjs from '@rollup/plugin-commonjs'
+import { uglify } from 'rollup-plugin-uglify'
+import resolve from '@rollup/plugin-node-resolve'
 
 const createConfig = (input, output, additionnalPlugins = []) => ({
   input,
@@ -10,8 +10,8 @@ const createConfig = (input, output, additionnalPlugins = []) => ({
     format: 'cjs',
   },
   plugins: [
-    nodeResolve({
-      jsnext: true,
+    resolve({
+      mainFields: ['jsnext:main'],
     }),
     commonjs({
       include: 'node_modules/**',
